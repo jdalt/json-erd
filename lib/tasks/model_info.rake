@@ -23,6 +23,7 @@ namespace :erd do |args|
 
     inspected_models = {}
     filtered_models(options).each do |model|
+      puts model.to_s
       inspected_models[model.to_s] = ModelInspector.detect_and_build(model)
     end
 
